@@ -1,48 +1,438 @@
-<section class="hero">
-  <div class="hero-content">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Showcasing my journey and skills in web development.</p>
-    <button>View Projects</button>
+<!-- Elegant Light-Themed Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top elegant-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <span>Code the Labs</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#projects-solutions">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#featured-work">Featured Work</a></li>
+        <li class="nav-item"><a class="nav-link" href="#downloads">Downloads</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact-footer">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Developer Modal -->
+<!-- Contact Developer Modal -->
+<div class="modal fade" id="contactDeveloperModal" tabindex="-1" aria-labelledby="contactDeveloperModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-3 shadow-lg">
+      <div class="modal-header border-0 justify-content-center pt-4">
+        <h5 class="modal-title fw-semibold" id="contactDeveloperModalLabel">Contact Developer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center px-4 pb-0">
+        <p class="mb-3">Interested in this project or solution? Get in touch with the developer for more details!</p>
+        
+        <p class="mb-2">
+          <strong>Email:</strong>
+          <a href="mailto:codethelabs&#64;gmail.com" class="text-decoration-none text-primary">codethelabs&#64;gmail.com</a>
+        </p>
+
+        <p>
+          <strong>Phone / WhatsApp:</strong>
+          <a href="tel:+17373203408" class="text-decoration-none text-primary">+1 737 320 3408</a>
+        </p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center pt-3 pb-4">
+        <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
+        <a href="#contact-footer" class="btn btn-primary px-4">Go to Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Carousel Hero Section -->
+<ngb-carousel class="carousel-hero mt-5 pt-4" [interval]="5000" [pauseOnHover]="true" [wrap]="true">
+  <!-- Slide 1: CODE THE LABS (with elegant font) -->
+  <ng-template ngbSlide>
+    <img src="https://res.cloudinary.com/dizorty5m/image/upload/v1749288926/ibmokm2nuxynkjtmakdv.jpg"
+         class="d-block w-100 carousel-img" alt="Slide 1">
+    <div class="carousel-caption text-center">
+      <h1 class="display-4 text-white">
+        Code The Labs
+      </h1>
+      <p class="lead">Your one stop solution for enterprise, web, and mobile app development.</p>
+    </div>
+  </ng-template>
+  <!-- Slide 2: Innovative Solutions -->
+  <ng-template ngbSlide>
+    <img src="https://res.cloudinary.com/dizorty5m/image/upload/v1749289263/pexels-mikhail-nilov-7988079_fz7q54.jpg"
+         class="d-block w-100 carousel-img" alt="Slide 1">
+    <div class="carousel-caption">
+      <h1 class="display-4">Innovative Solutions</h1>
+      <p>Building the future with cutting-edge technology and design.</p>
+    </div>
+  </ng-template>
+  <!-- Slide 3: Creative Code -->
+  <ng-template ngbSlide>
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1500&q=80"
+         class="d-block w-100 carousel-img" alt="Slide 2">
+    <div class="carousel-caption">
+      <h1 class="display-4">Creative Code. Real Impact.</h1>
+      <p>Explore innovative projects and solutions I’ve built.</p>
+    </div>
+  </ng-template>
+  <!-- Slide 4: Driven by Passion -->
+  <ng-template ngbSlide>
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1500&q=80"
+         class="d-block w-100 carousel-img" alt="Slide 3">
+    <div class="carousel-caption">
+      <h1 class="display-4">Driven by Passion</h1>
+      <p>Transforming ideas into digital experiences.</p>
+    </div>
+  </ng-template>
+  <!-- Slide 5: Join the Journey -->
+  <ng-template ngbSlide>
+    <img src="https://res.cloudinary.com/dizorty5m/image/upload/v1749289262/pexels-visual-tag-mx-1321732-2566581_1_zrevb1.jpg"
+         class="d-block w-100 carousel-img" alt="Slide 4">
+    <div class="carousel-caption">
+      <h1 class="display-4">Join the Journey</h1>
+      <p>Let’s build something amazing together.</p>
+    </div>
+  </ng-template>
+  <!-- Slide 6: Code the Labs -->
+  <ng-template ngbSlide>
+    <img src="https://res.cloudinary.com/dizorty5m/image/upload/v1749289261/pexels-startup-stock-photos-7374_tlktaq.jpg"
+         class="d-block w-100 carousel-img" alt="Slide 5">
+    <div class="carousel-caption">
+      <h1 class="display-4">Code the Labs</h1>
+      <p>Empowering companies with impactful solutions.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<!-- Downloads Section -->
+<section id="downloads" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="mb-5 text-center fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">
+      Downloads
+    </h2>
+    <div class="row justify-content-center gy-4">
+      <!-- Free Open Source -->
+      <div class="col-12 col-md-6">
+        <div class="p-4 border rounded-4 shadow-sm h-100">
+          <h3 class="mb-4 text-primary fw-semibold">Free Open Source</h3>
+          <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-download text-success fs-4"></i> Mask
+              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-download text-success fs-4"></i> Nisoko
+              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-download text-success fs-4"></i> Maestro
+              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Premium Solutions -->
+      <div class="col-12 col-md-6">
+        <div class="p-4 border rounded-4 shadow-sm h-100">
+          <h3 class="mb-4 text-primary fw-semibold">Premium Solutions</h3>
+          <ul class="list-group list-group-flush fs-5">
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-star-fill text-warning fs-4"></i> MaestroBusiness
+              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-star-fill text-warning fs-4"></i> Nisoko Business
+              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-star-fill text-warning fs-4"></i> U-Oda Business
+              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
+            </li>
+            <li class="list-group-item d-flex align-items-center gap-3">
+              <i class="bi bi-star-fill text-warning fs-4"></i> Others
+              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="about-me-snippet">
-  <h2>About Me</h2>
-  <p>
-    [Placeholder for a brief introduction about yourself, your passions,
-    and what drives you. This section will give visitors a glimpse into
-    who you are and what you do.]
-  </p>
+<!-- About Me Section -->
+<section id="about-me" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="lead text-center mx-auto" style="max-width: 700px;">
+      I am a versatile developer with strong proficiency in Flutter, Java, Kotlin, Dart, Angular, React, Android, JavaScript, Python, machine learning, C, and C++. Over the years, I have collaborated with various institutions to design and implement robust enterprise solutions, including point of sale systems, inventory management platforms, school information management systems, and fleet management applications.
+    </p>
+    <h3 class="mt-5 mb-3 text-center">Technologies & Tools</h3>
+    <div class="row text-center mb-4">
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="smartphone" style="font-size: 2rem; color:#40c4ff;"></i>
+        <p class="mt-2 mb-0">Flutter</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="code" style="font-size: 2rem; color:#d81b60;"></i>
+        <p class="mt-2 mb-0">Java</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="edit-3" style="font-size: 2rem; color:#ab47bc;"></i>
+        <p class="mt-2 mb-0">Kotlin</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="zap" style="font-size: 2rem; color:#26a69a;"></i>
+        <p class="mt-2 mb-0">Dart</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="triangle" style="font-size: 2rem; color:#dd0031;"></i>
+        <p class="mt-2 mb-0">Angular</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="refresh-cw" style="font-size: 2rem; color:#00d8ff;"></i>
+        <p class="mt-2 mb-0">React</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="box" style="font-size: 2rem; color:#4caf50;"></i>
+        <p class="mt-2 mb-0">Android</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="codepen" style="font-size: 2rem; color:#f7df1e;"></i>
+        <p class="mt-2 mb-0">JavaScript</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="terminal" style="font-size: 2rem; color:#3572a5;"></i>
+        <p class="mt-2 mb-0">Python</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="cpu" style="font-size: 2rem; color:#7b1fa2;"></i>
+        <p class="mt-2 mb-0">Machine Learning</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="monitor" style="font-size: 2rem; color:#616161;"></i>
+        <p class="mt-2 mb-0">C</p>
+      </div>
+      <div class="col-6 col-md-3 mb-3">
+        <i data-feather="server" style="font-size: 2rem; color:#424242;"></i>
+        <p class="mt-2 mb-0">C++</p>
+      </div>
+    </div>    
+  </div>
 </section>
 
-<section class="featured-work">
-  <h2>Featured Work</h2>
-  <div class="projects-grid">
-    <div class="project-item">
-      <div class="project-image-placeholder">[Image Placeholder]</div>
-      <h3>Project Title 1</h3>
-      <p>A brief description of the project, its purpose, and technologies used.</p>
-    </div>
-    <div class="project-item">
-      <div class="project-image-placeholder">[Image Placeholder]</div>
-      <h3>Project Title 2</h3>
-      <p>A brief description of the project, its purpose, and technologies used.</p>
-    </div>
-    <div class="project-item">
-      <div class="project-image-placeholder">[Image Placeholder]</div>
-      <h3>Project Title 3</h3>
-      <p>A brief description of the project, its purpose, and technologies used.</p>
+<!-- Projects & Solutions Section -->
+<section id="projects-solutions" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="color: #4f46e5;">Projects & Solutions</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Enterprise Solutions Card -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm rounded-4 border-0 h-100">
+          <div class="card-body">
+            <h3 class="card-title mb-4 text-primary fw-semibold">Enterprise Solutions I've Built</h3>
+            <ul class="list-unstyled fs-5">
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-cash-stack fs-3 text-success me-3"></i> 
+                <span>Point of Sale Systems</span>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-box-seam fs-3 text-info me-3"></i>
+                <span>Inventory Management Platforms</span>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-journal-bookmark fs-3 text-warning me-3"></i>
+                <span>School Information Management Systems</span>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-truck fs-3 text-danger me-3"></i>
+                <span>Fleet Management Applications</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Current Projects Card -->
+      <div class="col-12 col-md-6">
+        <div class="card shadow-sm rounded-4 border-0 h-100">
+          <div class="card-body">
+            <h3 class="card-title mb-4 text-primary fw-semibold">Current Projects</h3>
+            <ul class="list-unstyled fs-5">
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-cart4 fs-3 text-purple me-3" style="color:#8b5cf6;"></i>
+                <span>E-commerce</span>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-car-front fs-3 text-purple me-3" style="color:#7c3aed;"></i>
+                <span>E-hailing</span>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <i class="bi bi-basket fs-3 text-purple me-3" style="color:#a78bfa;"></i>
+                <span>Ordering and Delivery</span>
+              </li>
+              <li class="d-flex align-items-center">
+                <i class="bi bi-credit-card-2-front fs-3 text-purple me-3" style="color:#9333ea;"></i>
+                <span>Payment Solutions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-content">
-    <p>© 2023 Your Name</p>
-    <div class="social-links">
-      <a href="#" aria-label="LinkedIn Profile">[LinkedIn]</a>
-      <a href="#" aria-label="GitHub Profile">[GitHub]</a>
-      <!-- Add more social links as needed -->
+<!-- Featured Work Carousel Section -->
+<section id="featured-work" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">Featured Work</h2>
+    <div id="featuredCarousel" class="carousel slide" data-bs-ride="true" data-bs-interval="5000" data-bs-pause="hover">
+      <div class="carousel-inner">
+        <!-- Carousel item group 1 -->
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <!-- Maestro -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro App" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Maestro</h5>
+                  <p class="card-text">A sleek e-learning app for students to learn on-the-go.</p>
+                  <a href="#" class="btn btn-outline-primary btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Explore</a>
+                </div>
+              </div>
+            </div>
+            <!-- Maestro Business -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro Business" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Maestro Business</h5>
+                  <p class="card-text">E-learning for schools, trainers, and corporate training centers.</p>
+                  <a href="#" class="btn btn-outline-success btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Launch</a>
+                </div>
+              </div>
+            </div>
+            <!-- Nisoko -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/5632404/pexels-photo-5632404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Nisoko App" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Nisoko</h5>
+                  <p class="card-text">Seamless e-commerce experience with fast checkout and search.</p>
+                  <a href="#" class="btn btn-outline-warning btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel item group 2 -->
+        <div class="carousel-item">
+          <div class="row g-3">
+            <!-- Nisoko Business -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Nisoko Business" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Nisoko Business</h5>
+                  <p class="card-text">The engine behind your online store: manage, track, and sell.</p>
+                  <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Start Selling</a>
+                </div>
+              </div>
+            </div>
+            <!-- U-Oda -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="U-Oda Business" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">U-Oda Business</h5>
+                  <p class="card-text">Smart logistics and delivery tracking for modern commerce.</p>
+                  <a href="#" class="btn btn-outline-danger btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Try U-Oda</a>
+                </div>
+              </div>
+            </div>
+            <!-- Maestro Mobile -->
+            <div class="col-12 col-md-4">
+              <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro Mobile" loading="lazy">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Maestro Mobile</h5>
+                  <p class="card-text">For learners who prefer a mobile-first, distraction-free study experience.</p>
+                  <a href="#" class="btn btn-outline-info btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Open App</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Footer -->
+<footer id="contact-footer" class="py-4 text-white" style="background: linear-gradient(to right, #1b3053, #110331);">
+  <div class="container text-center">
+    <p class="mb-3">© {{ currentYear }} Code The Labs. All rights reserved.</p>
+    <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
+      <!-- Email -->
+      <a href="mailto:codethelabs@gmail.com" class="text-white text-decoration-none d-flex align-items-center" aria-label="Email">
+        <i class="bi bi-envelope-fill me-2" style="font-size: 1.2rem;"></i> codethelabs&#64;gmail.com
+      </a>
+      <!-- Mobile Phone (click to call and WhatsApp) -->
+      <a href="tel:+17373203408" class="text-white text-decoration-none d-flex align-items-center" aria-label="Phone">
+        <i class="bi bi-telephone-fill me-2" style="font-size: 1.2rem;"></i> +1 737 320 3408
+      </a>
+      <a href="https://wa.me/17373203408" target="_blank" rel="noopener" class="text-white text-decoration-none d-flex align-items-center" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp me-2" style="font-size: 1.2rem;"></i> WhatsApp
+      </a>
+      <!-- SMS -->
+      <a href="sms:+17373203408" class="text-white text-decoration-none d-flex align-items-center" aria-label="SMS">
+        <i class="bi bi-chat-dots-fill me-2" style="font-size: 1.2rem;"></i> SMS
+      </a>
+    </div>
+    <hr class="my-3" style="border-color: rgba(255,255,255,0.3);" />
+    <div class="d-flex justify-content-center gap-4">
+      <a href="#" class="text-white text-decoration-none" aria-label="LinkedIn Profile">
+        <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+      </a>
+      <a href="#" class="text-white text-decoration-none" aria-label="GitHub Profile">
+        <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+      </a>
     </div>
   </div>
 </footer>
+
+<!-- JavaScript to handle modal trigger -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.contact-developer');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        // Bootstrap modal is triggered via data attributes, so no additional JS is needed to show it
+      });
+    });
+  });
+</script>
