@@ -125,32 +125,22 @@
     <div class="row justify-content-center gy-4">
       <!-- Free Open Source -->
       <div class="col-12 col-lg-6">
-        <div class="p-4 rounded-4 shadow-lg h-100" style="background: var(--surface-color);">
-          <div class="d-flex align-items-center mb-4">
-            <i class="bi bi-cloud-download-fill fs-2 text-primary me-3"></i>
-            <h3 class="m-0">Free Open Source</h3>
-          </div>
-          <ul class="list-group list-group-flush fs-5">
-            <app-download-item fileId="mask" fileName="Mask" filePath="#"></app-download-item>
-            <app-download-item fileId="nisoko" fileName="Nisoko" filePath="#"></app-download-item>
-            <app-download-item fileId="maestro" fileName="Maestro" filePath="#"></app-download-item>
-            <app-download-item fileId="chatter" fileName="Chatter APK" filePath="assets/files/chatter.apk"></app-download-item>
-          </ul>
+        <div class="downloads-column">
+          <h3 class="h2 mb-4 text-primary">Free Open Source</h3>
+          <app-download-item fileId="mask" fileName="Mask" filePath="#"></app-download-item>
+          <app-download-item fileId="nisoko" fileName="Nisoko" filePath="#"></app-download-item>
+          <app-download-item fileId="maestro" fileName="Maestro" filePath="#"></app-download-item>
+          <app-download-item fileId="chatter" fileName="Chatter APK" filePath="assets/files/chatter.apk"></app-download-item>
         </div>
       </div>
       <!-- Premium Solutions -->
       <div class="col-12 col-lg-6">
-        <div class="p-4 rounded-4 shadow-lg h-100" style="background: var(--surface-color);">
-          <div class="d-flex align-items-center mb-4">
-            <i class="bi bi-gem fs-2 text-secondary me-3"></i>
-            <h3 class="m-0">Premium Solutions</h3>
-          </div>
-          <ul class="list-group list-group-flush fs-5">
-            <app-download-item fileId="maestro-business" fileName="MaestroBusiness" filePath="#" [isPremium]="true"></app-download-item>
-            <app-download-item fileId="nisoko-business" fileName="Nisoko Business" filePath="#" [isPremium]="true"></app-download-item>
-            <app-download-item fileId="uoda-business" fileName="U-Oda Business" filePath="#" [isPremium]="true"></app-download-item>
-            <app-download-item fileId="others" fileName="Others" filePath="#" [isPremium]="true"></app-download-item>
-          </ul>
+        <div class="downloads-column">
+          <h3 class="h2 mb-4 text-secondary">Premium Solutions</h3>
+          <app-download-item fileId="maestro-business" fileName="MaestroBusiness" filePath="#" [isPremium]="true"></app-download-item>
+          <app-download-item fileId="nisoko-business" fileName="Nisoko Business" filePath="#" [isPremium]="true"></app-download-item>
+          <app-download-item fileId="uoda-business" fileName="U-Oda Business" filePath="#" [isPremium]="true"></app-download-item>
+          <app-download-item fileId="others" fileName="Others" filePath="#" [isPremium]="true"></app-download-item>
         </div>
       </div>
     </div>
@@ -184,40 +174,70 @@
       <p class="lead text-muted">A showcase of my work in enterprise and modern applications.</p>
     </div>
     <div class="row g-4 justify-content-center">
-      <!-- Enterprise Solutions Card -->
+      <!-- Enterprise Solutions Column -->
       <div class="col-12 col-lg-6">
-        <div class="project-card h-100">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <h3 class="h1 text-primary">Enterprise Solutions</h3>
-              <p class="text-muted">Robust and scalable solutions for businesses.</p>
+        <div class="solutions-column">
+          <h3 class="h2 mb-4 text-primary">Enterprise Solutions</h3>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-cash-stack"></i></div>
+            <div class="solution-content">
+              <h5>Point of Sale Systems</h5>
+              <p>Robust and scalable POS solutions for businesses of all sizes.</p>
             </div>
-            <div class="project-card-back">
-              <ul class="list-unstyled fs-5">
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Point of Sale Systems</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Inventory Management</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>School Management</li>
-                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Fleet Management</li>
-              </ul>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-box-seam"></i></div>
+            <div class="solution-content">
+              <h5>Inventory Management</h5>
+              <p>Efficiently track and manage your inventory with our powerful tools.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-journal-bookmark"></i></div>
+            <div class="solution-content">
+              <h5>School Management</h5>
+              <p>Comprehensive systems to manage all aspects of your educational institution.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-truck"></i></div>
+            <div class="solution-content">
+              <h5>Fleet Management</h5>
+              <p>Optimize your fleet operations with our advanced tracking and management software.</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Current Projects Card -->
+      <!-- Current Projects Column -->
       <div class="col-12 col-lg-6">
-        <div class="project-card h-100">
-          <div class="project-card-inner">
-            <div class="project-card-front">
-              <h3 class="h1 text-secondary">Current Projects</h3>
-              <p class="text-muted">Innovative solutions for modern challenges.</p>
+        <div class="solutions-column">
+          <h3 class="h2 mb-4 text-secondary">Current Projects</h3>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-cart4"></i></div>
+            <div class="solution-content">
+              <h5>E-commerce Platforms</h5>
+              <p>Building the next generation of online shopping experiences.</p>
             </div>
-            <div class="project-card-back">
-              <ul class="list-unstyled fs-5">
-                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i>E-commerce Platforms</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i>E-hailing Applications</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i>Ordering & Delivery</li>
-                <li><i class="bi bi-arrow-right-circle-fill text-info me-2"></i>Payment Solutions</li>
-              </ul>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-car-front"></i></div>
+            <div class="solution-content">
+              <h5>E-hailing Applications</h5>
+              <p>Developing innovative and reliable e-hailing solutions for modern cities.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-basket"></i></div>
+            <div class="solution-content">
+              <h5>Ordering & Delivery</h5>
+              <p>Streamlining the ordering and delivery process for businesses and customers.</p>
+            </div>
+          </div>
+          <div class="solution-item">
+            <div class="solution-icon"><i class="bi bi-credit-card-2-front"></i></div>
+            <div class="solution-content">
+              <h5>Payment Solutions</h5>
+              <p>Creating secure and seamless payment gateways for online transactions.</p>
             </div>
           </div>
         </div>
