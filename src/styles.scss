@@ -2,17 +2,17 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 :root {
-  --background-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --primary-color: #00bfff;
-  --secondary-color: #00ffc4;
-  --surface-color: #242424;
-  --header-background: rgba(26, 26, 26, 0.8);
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #ffffff;
+  --secondary-color: #b0b0b0;
+  --surface-color: #1a1a1a;
+  --header-background: rgba(0, 0, 0, 0.8);
   --footer-background: linear-gradient(to right, #1a1a1a, #000000);
-  --card-background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
-  --border-color: #444;
-  --background-gradient: linear-gradient(to bottom right, #1a1a1a, #000000);
-  --card-gradient: linear-gradient(to bottom right, #2c2c2c, #1a1a1a);
+  --card-background: linear-gradient(145deg, #1c1c1c, #0d0d0d);
+  --border-color: #333333;
+  --background-gradient: linear-gradient(to bottom right, #000000, #1a1a1a);
+  --card-gradient: linear-gradient(to bottom right, #1c1c1c, #0d0d0d);
 }
 
 body {
