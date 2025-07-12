@@ -4,19 +4,70 @@
 :root {
   --background-color: #000000;
   --text-color: #ffffff;
-  --primary-color: #ffffff;
+  --primary-color: linear-gradient(to right, #000000, #333333);
   --secondary-color: #b0b0b0;
+  --warning-color: #b0b0b0; // Replaces amber with theme gray
   --surface-color: #1a1a1a;
   --header-background: rgba(0, 0, 0, 0.8);
   --footer-background: linear-gradient(to right, #1a1a1a, #000000);
-  --card-background: linear-gradient(145deg, #1c1c1c, #0d0d0d);
   --border-color: #333333;
   --background-gradient: linear-gradient(to bottom right, #000000, #1a1a1a);
-  --card-gradient: linear-gradient(to bottom right, #1c1c1c, #0d0d0d);
+  
+  // New card gradient variables
+  --card-gradient-dark: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  --card-gradient-light: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+  --card-border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(to right, #000000, #333333);
+  color: #ffffff !important; /* Pure white for maximum contrast */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #333333, #000000);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff !important;
+}
+
+.btn-outline-light {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(to right, #f5f5f5, #e0e0e0);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+  transform: translateY(-2px);
 }

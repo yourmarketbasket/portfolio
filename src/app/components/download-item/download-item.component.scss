@@ -3,12 +3,83 @@
 }
 
 .list-group-item {
-  background-color: var(--card-background);
-  color: var(--text-color);
-  border-color: var(--border-color);
+  background: transparent !important;
+  border: none !important;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateX(5px);
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
-.badge {
-    background-color: var(--primary-color) !important;
-    color: var(--background-color) !important;
+.download-count {
+  background-color: #f0f0f0; /* Light background for contrast */
+  color: #333; /* Dark text for readability */
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Download button styles - override any existing classes */
+:host ::ng-deep .btn-download,
+:host ::ng-deep .btn-primary {
+  background: linear-gradient(to right, #000000, #333333) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 2rem !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+:host ::ng-deep .btn-download:hover,
+:host ::ng-deep .btn-primary:hover {
+  background: linear-gradient(to right, #333333, #000000) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Access button styles - override amber/border colors */
+:host ::ng-deep .btn-access,
+:host ::ng-deep .btn-outline-warning {
+  background: transparent !important;
+  border: 1px solid var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: 2rem !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+:host ::ng-deep .btn-access:hover,
+:host ::ng-deep .btn-outline-warning:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px) !important;
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Remove any amber color classes */
+:host ::ng-deep .btn-outline-warning {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}
+
+/* Icon styles */
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-download:hover .btn-icon {
+  transform: translateY(-2px);
 }

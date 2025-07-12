@@ -1,9 +1,9 @@
 <li class="list-group-item download-item d-flex align-items-center gap-3">
-  <i class="bi fs-4" [ngClass]="{'bi-download text-success': !isPremium, 'bi-star-fill text-warning': isPremium}"></i>
+  <i class="bi fs-4" [ngClass]="{'bi-download btn-icon': !isPremium, 'bi-star-fill btn-icon': isPremium}"></i>
   <span class="flex-grow-1">{{ fileName }}</span>
-  <span class="badge rounded-pill bg-primary">{{ downloadCount$ | async }} downloads</span>
+  <span class="badge rounded-pill">{{ downloadCount$ | async }} downloads</span>
   <button class="btn btn-sm"
-          [ngClass]="{'btn-outline-primary': !isPremium, 'btn-outline-warning': isPremium}"
+          [ngClass]="{'btn-download': !isPremium, 'btn-access': isPremium}"
           (click)="handleDownload()">
     {{ isPremium ? 'Get Access' : 'Download' }}
   </button>
