@@ -118,14 +118,18 @@
 <!-- Downloads Section -->
 <section id="downloads" class="py-5 reveal">
   <div class="container">
-    <h2 class="mb-5 text-center fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">
-      Downloads
-    </h2>
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Downloads</h2>
+      <p class="lead text-muted">Explore our collection of free and premium software solutions.</p>
+    </div>
     <div class="row justify-content-center gy-4">
       <!-- Free Open Source -->
-      <div class="col-12 col-md-6">
-        <div class="p-4 border rounded-4 shadow-sm h-100">
-          <h3 class="mb-4 text-primary fw-semibold">Free Open Source</h3>
+      <div class="col-12 col-lg-6">
+        <div class="p-4 rounded-4 shadow-lg h-100" style="background: var(--surface-color);">
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-cloud-download-fill fs-2 text-primary me-3"></i>
+            <h3 class="m-0">Free Open Source</h3>
+          </div>
           <ul class="list-group list-group-flush fs-5">
             <app-download-item fileId="mask" fileName="Mask" filePath="#"></app-download-item>
             <app-download-item fileId="nisoko" fileName="Nisoko" filePath="#"></app-download-item>
@@ -135,9 +139,12 @@
         </div>
       </div>
       <!-- Premium Solutions -->
-      <div class="col-12 col-md-6">
-        <div class="p-4 border rounded-4 shadow-sm h-100">
-          <h3 class="mb-4 text-primary fw-semibold">Premium Solutions</h3>
+      <div class="col-12 col-lg-6">
+        <div class="p-4 rounded-4 shadow-lg h-100" style="background: var(--surface-color);">
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-gem fs-2 text-secondary me-3"></i>
+            <h3 class="m-0">Premium Solutions</h3>
+          </div>
           <ul class="list-group list-group-flush fs-5">
             <app-download-item fileId="maestro-business" fileName="MaestroBusiness" filePath="#" [isPremium]="true"></app-download-item>
             <app-download-item fileId="nisoko-business" fileName="Nisoko Business" filePath="#" [isPremium]="true"></app-download-item>
@@ -153,115 +160,78 @@
 <!-- About Me Section -->
 <section id="about-me" class="py-5 reveal">
   <div class="container">
-    <h2 class="text-center mb-4">About Me</h2>
-    <p class="lead text-center mx-auto" style="max-width: 700px;">
-      I am a versatile developer with strong proficiency in Flutter, Java, Kotlin, Dart, Angular, React, Android, JavaScript, Python, machine learning, C, and C++. Over the years, I have collaborated with various institutions to design and implement robust enterprise solutions, including point of sale systems, inventory management platforms, school information management systems, and fleet management applications.
-    </p>
-    <h3 class="mt-5 mb-3 text-center">Technologies & Tools</h3>
-    <div class="row text-center mb-4">
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="smartphone" style="font-size: 2rem; color:#40c4ff;"></i>
-        <p class="mt-2 mb-0">Flutter</p>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4 shadow-lg" alt="About Me Image">
       </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="code" style="font-size: 2rem; color:#d81b60;"></i>
-        <p class="mt-2 mb-0">Java</p>
+      <div class="col-lg-6">
+        <div class="ps-lg-5 mt-5 mt-lg-0">
+          <h2 class="display-5 fw-bold">About Me</h2>
+          <p class="lead text-muted">A passionate developer with a knack for creating elegant and efficient solutions.</p>
+          <p>I am a versatile developer with strong proficiency in Flutter, Java, Kotlin, Dart, Angular, React, Android, JavaScript, Python, machine learning, C, and C++. Over the years, I have collaborated with various institutions to design and implement robust enterprise solutions, including point of sale systems, inventory management platforms, school information management systems, and fleet management applications.</p>
+          <a href="#contact-footer" class="btn btn-primary mt-3">Get in Touch</a>
+        </div>
       </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="edit-3" style="font-size: 2rem; color:#ab47bc;"></i>
-        <p class="mt-2 mb-0">Kotlin</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="zap" style="font-size: 2rem; color:#26a69a;"></i>
-        <p class="mt-2 mb-0">Dart</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="triangle" style="font-size: 2rem; color:#dd0031;"></i>
-        <p class="mt-2 mb-0">Angular</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="refresh-cw" style="font-size: 2rem; color:#00d8ff;"></i>
-        <p class="mt-2 mb-0">React</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="box" style="font-size: 2rem; color:#4caf50;"></i>
-        <p class="mt-2 mb-0">Android</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="codepen" style="font-size: 2rem; color:#f7df1e;"></i>
-        <p class="mt-2 mb-0">JavaScript</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="terminal" style="font-size: 2rem; color:#3572a5;"></i>
-        <p class="mt-2 mb-0">Python</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="cpu" style="font-size: 2rem; color:#7b1fa2;"></i>
-        <p class="mt-2 mb-0">Machine Learning</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="monitor" style="font-size: 2rem; color:#616161;"></i>
-        <p class="mt-2 mb-0">C</p>
-      </div>
-      <div class="col-6 col-md-3 mb-3">
-        <i data-feather="server" style="font-size: 2rem; color:#424242;"></i>
-        <p class="mt-2 mb-0">C++</p>
-      </div>
-    </div>    
+    </div>
   </div>
 </section>
 
 <!-- Projects & Solutions Section -->
 <section id="projects-solutions" class="py-5 reveal">
   <div class="container">
-    <h2 class="text-center mb-5 fw-bold" style="color: #4f46e5;">Projects & Solutions</h2>
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Projects & Solutions</h2>
+      <p class="lead text-muted">A showcase of my work in enterprise and modern applications.</p>
+    </div>
     <div class="row g-4 justify-content-center">
       <!-- Enterprise Solutions Card -->
-      <div class="col-12 col-md-6">
-        <div class="card shadow-sm rounded-4 border-0 h-100">
-          <div class="card-body">
-            <h3 class="card-title mb-4 text-primary fw-semibold">Enterprise Solutions I've Built</h3>
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-lg rounded-4 border-0 h-100">
+          <div class="card-body p-5">
+            <h3 class="card-title h1 mb-4 text-primary">Enterprise Solutions</h3>
+            <p class="text-muted mb-4">Robust and scalable solutions for businesses.</p>
             <ul class="list-unstyled fs-5">
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-cash-stack fs-3 text-success me-3"></i> 
+                <i class="bi bi-check-circle-fill fs-4 text-success me-3"></i>
                 <span>Point of Sale Systems</span>
               </li>
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-box-seam fs-3 text-info me-3"></i>
-                <span>Inventory Management Platforms</span>
+                <i class="bi bi-check-circle-fill fs-4 text-success me-3"></i>
+                <span>Inventory Management</span>
               </li>
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-journal-bookmark fs-3 text-warning me-3"></i>
-                <span>School Information Management Systems</span>
+                <i class="bi bi-check-circle-fill fs-4 text-success me-3"></i>
+                <span>School Management</span>
               </li>
               <li class="d-flex align-items-center">
-                <i class="bi bi-truck fs-3 text-danger me-3"></i>
-                <span>Fleet Management Applications</span>
+                <i class="bi bi-check-circle-fill fs-4 text-success me-3"></i>
+                <span>Fleet Management</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <!-- Current Projects Card -->
-      <div class="col-12 col-md-6">
-        <div class="card shadow-sm rounded-4 border-0 h-100">
-          <div class="card-body">
-            <h3 class="card-title mb-4 text-primary fw-semibold">Current Projects</h3>
+      <div class="col-12 col-lg-6">
+        <div class="card shadow-lg rounded-4 border-0 h-100">
+          <div class="card-body p-5">
+            <h3 class="card-title h1 mb-4 text-secondary">Current Projects</h3>
+            <p class="text-muted mb-4">Innovative solutions for modern challenges.</p>
             <ul class="list-unstyled fs-5">
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-cart4 fs-3 text-purple me-3" style="color:#8b5cf6;"></i>
-                <span>E-commerce</span>
+                <i class="bi bi-arrow-right-circle-fill fs-4 text-info me-3"></i>
+                <span>E-commerce Platforms</span>
               </li>
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-car-front fs-3 text-purple me-3" style="color:#7c3aed;"></i>
-                <span>E-hailing</span>
+                <i class="bi bi-arrow-right-circle-fill fs-4 text-info me-3"></i>
+                <span>E-hailing Applications</span>
               </li>
               <li class="d-flex align-items-center mb-3">
-                <i class="bi bi-basket fs-3 text-purple me-3" style="color:#a78bfa;"></i>
-                <span>Ordering and Delivery</span>
+                <i class="bi bi-arrow-right-circle-fill fs-4 text-info me-3"></i>
+                <span>Ordering & Delivery</span>
               </li>
               <li class="d-flex align-items-center">
-                <i class="bi bi-credit-card-2-front fs-3 text-purple me-3" style="color:#9333ea;"></i>
+                <i class="bi bi-arrow-right-circle-fill fs-4 text-info me-3"></i>
                 <span>Payment Solutions</span>
               </li>
             </ul>
@@ -275,42 +245,45 @@
 <!-- Featured Work Carousel Section -->
 <section id="featured-work" class="py-5 reveal">
   <div class="container">
-    <h2 class="text-center mb-5 fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">Featured Work</h2>
-    <div id="featuredCarousel" class="carousel slide" data-bs-ride="true" data-bs-interval="5000" data-bs-pause="hover">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">Featured Work</h2>
+      <p class="lead text-muted">A selection of projects that showcase my skills and creativity.</p>
+    </div>
+    <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
       <div class="carousel-inner">
         <!-- Carousel item group 1 -->
         <div class="carousel-item active">
-          <div class="row g-3">
+          <div class="row g-4">
             <!-- Maestro -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/4145190/pexels-photo-4145190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro App" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">Maestro</h5>
-                  <p class="card-text">A sleek e-learning app for students to learn on-the-go.</p>
-                  <a href="#" class="btn btn-outline-primary btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Explore</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">Maestro</h5>
+                  <p class="card-text flex-grow-1">A sleek e-learning app for students to learn on-the-go.</p>
+                  <a href="#" class="btn btn-outline-primary rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Explore</a>
                 </div>
               </div>
             </div>
             <!-- Maestro Business -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro Business" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">Maestro Business</h5>
-                  <p class="card-text">E-learning for schools, trainers, and corporate training centers.</p>
-                  <a href="#" class="btn btn-outline-success btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Launch</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">Maestro Business</h5>
+                  <p class="card-text flex-grow-1">E-learning for schools, trainers, and corporate training centers.</p>
+                  <a href="#" class="btn btn-outline-success rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Launch</a>
                 </div>
               </div>
             </div>
             <!-- Nisoko -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/5632404/pexels-photo-5632404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Nisoko App" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">Nisoko</h5>
-                  <p class="card-text">Seamless e-commerce experience with fast checkout and search.</p>
-                  <a href="#" class="btn btn-outline-warning btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Shop Now</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">Nisoko</h5>
+                  <p class="card-text flex-grow-1">Seamless e-commerce experience with fast checkout and search.</p>
+                  <a href="#" class="btn btn-outline-warning rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Shop Now</a>
                 </div>
               </div>
             </div>
@@ -318,37 +291,37 @@
         </div>
         <!-- Carousel item group 2 -->
         <div class="carousel-item">
-          <div class="row g-3">
+          <div class="row g-4">
             <!-- Nisoko Business -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Nisoko Business" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">Nisoko Business</h5>
-                  <p class="card-text">The engine behind your online store: manage, track, and sell.</p>
-                  <a href="#" class="btn btn-outline-secondary btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Start Selling</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">Nisoko Business</h5>
+                  <p class="card-text flex-grow-1">The engine behind your online store: manage, track, and sell.</p>
+                  <a href="#" class="btn btn-outline-secondary rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Start Selling</a>
                 </div>
               </div>
             </div>
             <!-- U-Oda -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="U-Oda Business" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">U-Oda Business</h5>
-                  <p class="card-text">Smart logistics and delivery tracking for modern commerce.</p>
-                  <a href="#" class="btn btn-outline-danger btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Try U-Oda</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">U-Oda Business</h5>
+                  <p class="card-text flex-grow-1">Smart logistics and delivery tracking for modern commerce.</p>
+                  <a href="#" class="btn btn-outline-danger rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Try U-Oda</a>
                 </div>
               </div>
             </div>
             <!-- Maestro Mobile -->
             <div class="col-12 col-md-4">
-              <div class="card h-100 shadow-sm border-0">
+              <div class="card h-100 shadow-lg rounded-4 border-0 overflow-hidden">
                 <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="Maestro Mobile" loading="lazy">
-                <div class="card-body">
-                  <h5 class="card-title fw-semibold">Maestro Mobile</h5>
-                  <p class="card-text">For learners who prefer a mobile-first, distraction-free study experience.</p>
-                  <a href="#" class="btn btn-outline-info btn-sm rounded-pill contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Open App</a>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title fw-bold h4">Maestro Mobile</h5>
+                  <p class="card-text flex-grow-1">For learners who prefer a mobile-first, distraction-free study experience.</p>
+                  <a href="#" class="btn btn-outline-info rounded-pill contact-developer mt-auto" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Open App</a>
                 </div>
               </div>
             </div>

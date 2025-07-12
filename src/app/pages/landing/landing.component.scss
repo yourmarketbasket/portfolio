@@ -112,6 +112,65 @@ section {
   color: var(--text-color);
 }
 
+#downloads .lead.text-muted {
+  color: var(--text-color) !important;
+  opacity: 0.7;
+}
+
+#downloads .shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+#about-me .lead.text-muted {
+  color: var(--text-color) !important;
+  opacity: 0.7;
+}
+
+#about-me .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--background-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#about-me .btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+#projects-solutions .lead.text-muted {
+  color: var(--text-color) !important;
+  opacity: 0.7;
+}
+
+#projects-solutions .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects-solutions .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2rem 4rem rgba(0,0,0,.25) !important;
+}
+
+#featured-work .lead.text-muted {
+  color: var(--text-color) !important;
+  opacity: 0.7;
+}
+
+#featured-work .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#featured-work .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2rem 4rem rgba(0,0,0,.25) !important;
+}
+
+#featured-work .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
 .card {
   background-color: var(--card-background);
   border-color: var(--border-color);
