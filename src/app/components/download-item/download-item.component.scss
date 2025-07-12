@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+}
+
+.list-group-item {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.badge {
+    background-color: var(--primary-color) !important;
+    color: var(--background-color) !important;
+}

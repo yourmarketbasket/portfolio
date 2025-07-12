@@ -1,7 +1,12 @@
-<!-- Elegant Light-Themed Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top elegant-navbar">
+<!-- Elegant Dark-Themed Navigation Bar -->
+<header class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top elegant-navbar">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
       <span>Code the Labs</span>
     </a>
 
@@ -20,29 +25,30 @@
       </ul>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- Contact Developer Modal -->
 <!-- Contact Developer Modal -->
 <div class="modal fade" id="contactDeveloperModal" tabindex="-1" aria-labelledby="contactDeveloperModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-3 shadow-lg">
+    <div class="modal-content text-white rounded-3 shadow-lg" style="background: linear-gradient(135deg, #232526, #414345);">
       <div class="modal-header border-0 justify-content-center pt-4">
         <h5 class="modal-title fw-semibold" id="contactDeveloperModalLabel">Contact Developer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-center px-4 pb-0">
-        <p class="mb-3">Interested in this project or solution? Get in touch with the developer for more details!</p>
+        <p class="mb-4">Interested in this project or have a question? I'd love to hear from you!</p>
         
-        <p class="mb-2">
-          <strong>Email:</strong>
-          <a href="mailto:codethelabs&#64;gmail.com" class="text-decoration-none text-primary">codethelabs&#64;gmail.com</a>
-        </p>
-<!-- more test changes -->
+        <div class="d-grid gap-3">
+          <a href="mailto:codethelabs&#64;gmail.com" class="btn btn-outline-light d-flex align-items-center justify-content-center">
+            <i class="bi bi-envelope-fill me-2"></i> Email
+          </a>
+          <a href="https://wa.me/17373203408" target="_blank" rel="noopener" class="btn btn-outline-light d-flex align-items-center justify-content-center">
+            <i class="bi bi-whatsapp me-2"></i> WhatsApp
+          </a>
+        </div>
       </div>
       <div class="modal-footer border-0 justify-content-center pt-3 pb-4">
-        <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
-        <a href="#contact-footer" class="btn btn-primary px-4">Go to Contact</a>
+        <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -110,7 +116,7 @@
 </ngb-carousel>
 
 <!-- Downloads Section -->
-<section id="downloads" class="py-5 bg-white">
+<section id="downloads" class="py-5 reveal">
   <div class="container">
     <h2 class="mb-5 text-center fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">
       Downloads
@@ -121,22 +127,10 @@
         <div class="p-4 border rounded-4 shadow-sm h-100">
           <h3 class="mb-4 text-primary fw-semibold">Free Open Source</h3>
           <ul class="list-group list-group-flush fs-5">
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-download text-success fs-4"></i> Mask
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-download text-success fs-4"></i> Nisoko
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-download text-success fs-4"></i> Maestro
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-download text-success fs-4"></i> Chatter APK
-              <a href="assets/files/chatter.apk" download="chatter.apk" class="ms-auto btn btn-sm btn-outline-success">Download</a>
-            </li>
+            <app-download-item fileId="mask" fileName="Mask" filePath="#"></app-download-item>
+            <app-download-item fileId="nisoko" fileName="Nisoko" filePath="#"></app-download-item>
+            <app-download-item fileId="maestro" fileName="Maestro" filePath="#"></app-download-item>
+            <app-download-item fileId="chatter" fileName="Chatter APK" filePath="assets/files/chatter.apk"></app-download-item>
           </ul>
         </div>
       </div>
@@ -145,22 +139,10 @@
         <div class="p-4 border rounded-4 shadow-sm h-100">
           <h3 class="mb-4 text-primary fw-semibold">Premium Solutions</h3>
           <ul class="list-group list-group-flush fs-5">
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-star-fill text-warning fs-4"></i> MaestroBusiness
-              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-star-fill text-warning fs-4"></i> Nisoko Business
-              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-star-fill text-warning fs-4"></i> U-Oda Business
-              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
-            </li>
-            <li class="list-group-item d-flex align-items-center gap-3">
-              <i class="bi bi-star-fill text-warning fs-4"></i> Others
-              <a href="#" class="ms-auto btn btn-sm btn-outline-warning contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Get Access</a>
-            </li>
+            <app-download-item fileId="maestro-business" fileName="MaestroBusiness" filePath="#" [isPremium]="true"></app-download-item>
+            <app-download-item fileId="nisoko-business" fileName="Nisoko Business" filePath="#" [isPremium]="true"></app-download-item>
+            <app-download-item fileId="uoda-business" fileName="U-Oda Business" filePath="#" [isPremium]="true"></app-download-item>
+            <app-download-item fileId="others" fileName="Others" filePath="#" [isPremium]="true"></app-download-item>
           </ul>
         </div>
       </div>
@@ -169,7 +151,7 @@
 </section>
 
 <!-- About Me Section -->
-<section id="about-me" class="py-5 bg-light">
+<section id="about-me" class="py-5 reveal">
   <div class="container">
     <h2 class="text-center mb-4">About Me</h2>
     <p class="lead text-center mx-auto" style="max-width: 700px;">
@@ -230,7 +212,7 @@
 </section>
 
 <!-- Projects & Solutions Section -->
-<section id="projects-solutions" class="py-5 bg-white">
+<section id="projects-solutions" class="py-5 reveal">
   <div class="container">
     <h2 class="text-center mb-5 fw-bold" style="color: #4f46e5;">Projects & Solutions</h2>
     <div class="row g-4 justify-content-center">
@@ -291,7 +273,7 @@
 </section>
 
 <!-- Featured Work Carousel Section -->
-<section id="featured-work" class="py-5 bg-light">
+<section id="featured-work" class="py-5 reveal">
   <div class="container">
     <h2 class="text-center mb-5 fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">Featured Work</h2>
     <div id="featuredCarousel" class="carousel slide" data-bs-ride="true" data-bs-interval="5000" data-bs-pause="hover">
@@ -392,7 +374,7 @@
 </section>
 
 <!-- Contact Footer -->
-<footer id="contact-footer" class="py-4 text-white" style="background: linear-gradient(to right, #1b3053, #110331);">
+<footer id="contact-footer" class="py-4 text-white">
   <div class="container text-center">
     <p class="mb-3">© {{ currentYear }} Code The Labs. All rights reserved.</p>
     <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">

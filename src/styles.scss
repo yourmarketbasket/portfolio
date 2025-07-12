@@ -1,20 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
 
-// Import Google Fonts - Roboto
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-// Bootstrap sets box-sizing to border-box for all elements (*, ::before, ::after)
-// and includes a CSS reset (Reboot).
-
-body {
-  font-family: 'Roboto', sans-serif;
-  // Bootstrap's default font-size (1rem) and line-height (1.5) are generally good.
-  // If specific overrides are needed, they can be placed here.
-  // e.g., font-size: 16px;
-  // line-height: 1.6;
+:root {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --surface-color: #1e1e1e;
+  --header-background: rgba(30, 30, 30, 0.8);
+  --footer-background: linear-gradient(to right, #1b3053, #110331);
+  --card-background: #2c2c2c;
+  --border-color: #444;
 }
 
-/* Importing Bootstrap SCSS file. */
-// It's generally better to import variables and then the rest of bootstrap
-// if you plan to customize bootstrap variables. For now, this is fine.
-@import 'bootstrap/scss/bootstrap';
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}

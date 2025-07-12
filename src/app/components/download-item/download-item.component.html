@@ -1,0 +1,10 @@
+<li class="list-group-item d-flex align-items-center gap-3">
+  <i class="bi fs-4" [ngClass]="{'bi-download text-success': !isPremium, 'bi-star-fill text-warning': isPremium}"></i>
+  {{ fileName }}
+  <span class="ms-2 badge rounded-pill bg-secondary">{{ downloadCount$ | async }} downloads</span>
+  <button class="ms-auto btn btn-sm"
+          [ngClass]="{'btn-outline-success': !isPremium, 'btn-outline-warning': isPremium}"
+          (click)="handleDownload()">
+    {{ isPremium ? 'Get Access' : 'Download' }}
+  </button>
+</li>
