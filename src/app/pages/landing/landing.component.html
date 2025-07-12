@@ -1,53 +1,27 @@
-<!-- Elegant Light-Themed Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top elegant-navbar">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">
-      <span>Code the Labs</span>
-    </a>
+<app-header></app-header>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#projects-solutions">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#featured-work">Featured Work</a></li>
-        <li class="nav-item"><a class="nav-link" href="#downloads">Downloads</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact-footer">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Contact Developer Modal -->
 <!-- Contact Developer Modal -->
 <div class="modal fade" id="contactDeveloperModal" tabindex="-1" aria-labelledby="contactDeveloperModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-3 shadow-lg">
-      <div class="modal-header border-0 justify-content-center pt-4">
-        <h5 class="modal-title fw-semibold" id="contactDeveloperModalLabel">Contact Developer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactDeveloperModalLabel">Contact Developer</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center px-4 pb-0">
-        <p class="mb-3">Interested in this project or solution? Get in touch with the developer for more details!</p>
-        
-        <p class="mb-2">
+      <div class="modal-body">
+        <p>Interested in this project or solution? Get in touch with the developer for more details!</p>
+        <p>
           <strong>Email:</strong>
-          <a href="mailto:codethelabs&#64;gmail.com" class="text-decoration-none text-primary">codethelabs&#64;gmail.com</a>
+          <a href="mailto:codethelabs&#64;gmail.com">codethelabs&#64;gmail.com</a>
         </p>
-<!-- more test changes -->
       </div>
-      <div class="modal-footer border-0 justify-content-center pt-3 pb-4">
-        <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
-        <a href="#contact-footer" class="btn btn-primary px-4">Go to Contact</a>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <a href="#contact-footer" class="btn btn-primary" data-bs-dismiss="modal">Go to Contact</a>
       </div>
     </div>
   </div>
 </div>
-
 
 <!-- Carousel Hero Section -->
 <ngb-carousel class="carousel-hero mt-5 pt-4" [interval]="5000" [pauseOnHover]="true" [wrap]="true">
@@ -110,7 +84,7 @@
 </ngb-carousel>
 
 <!-- Downloads Section -->
-<section id="downloads" class="py-5 bg-white">
+<section #animatedSection id="downloads" class="py-5 bg-white">
   <div class="container">
     <h2 class="mb-5 text-center fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">
       Downloads
@@ -123,19 +97,23 @@
           <ul class="list-group list-group-flush fs-5">
             <li class="list-group-item d-flex align-items-center gap-3">
               <i class="bi bi-download text-success fs-4"></i> Mask
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+              <span class="badge bg-secondary ms-2">{{ getDownloadCount('mask') | async }}</span>
+              <a href="#" (click)="downloadFile('mask')" class="ms-auto btn btn-sm btn-outline-success">Download</a>
             </li>
             <li class="list-group-item d-flex align-items-center gap-3">
               <i class="bi bi-download text-success fs-4"></i> Nisoko
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+              <span class="badge bg-secondary ms-2">{{ getDownloadCount('nisoko') | async }}</span>
+              <a href="#" (click)="downloadFile('nisoko')" class="ms-auto btn btn-sm btn-outline-success">Download</a>
             </li>
             <li class="list-group-item d-flex align-items-center gap-3">
               <i class="bi bi-download text-success fs-4"></i> Maestro
-              <a href="#" class="ms-auto btn btn-sm btn-outline-success contact-developer" data-bs-toggle="modal" data-bs-target="#contactDeveloperModal">Download</a>
+              <span class="badge bg-secondary ms-2">{{ getDownloadCount('maestro') | async }}</span>
+              <a href="#" (click)="downloadFile('maestro')" class="ms-auto btn btn-sm btn-outline-success">Download</a>
             </li>
             <li class="list-group-item d-flex align-items-center gap-3">
               <i class="bi bi-download text-success fs-4"></i> Chatter APK
-              <a href="assets/files/chatter.apk" download="chatter.apk" class="ms-auto btn btn-sm btn-outline-success">Download</a>
+              <span class="badge bg-secondary ms-2">{{ getDownloadCount('chatter.apk') | async }}</span>
+              <a href="assets/files/chatter.apk" (click)="downloadFile('chatter.apk')" download="chatter.apk" class="ms-auto btn btn-sm btn-outline-success">Download</a>
             </li>
           </ul>
         </div>
@@ -169,7 +147,7 @@
 </section>
 
 <!-- About Me Section -->
-<section id="about-me" class="py-5 bg-light">
+<section #animatedSection id="about-me" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4">About Me</h2>
     <p class="lead text-center mx-auto" style="max-width: 700px;">
@@ -230,7 +208,7 @@
 </section>
 
 <!-- Projects & Solutions Section -->
-<section id="projects-solutions" class="py-5 bg-white">
+<section #animatedSection id="projects-solutions" class="py-5 bg-white">
   <div class="container">
     <h2 class="text-center mb-5 fw-bold" style="color: #4f46e5;">Projects & Solutions</h2>
     <div class="row g-4 justify-content-center">
@@ -291,7 +269,7 @@
 </section>
 
 <!-- Featured Work Carousel Section -->
-<section id="featured-work" class="py-5 bg-light">
+<section #animatedSection id="featured-work" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-5 fw-bold" style="background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; color: transparent;">Featured Work</h2>
     <div id="featuredCarousel" class="carousel slide" data-bs-ride="true" data-bs-interval="5000" data-bs-pause="hover">
@@ -391,38 +369,7 @@
   </div>
 </section>
 
-<!-- Contact Footer -->
-<footer id="contact-footer" class="py-4 text-white" style="background: linear-gradient(to right, #1b3053, #110331);">
-  <div class="container text-center">
-    <p class="mb-3">© {{ currentYear }} Code The Labs. All rights reserved.</p>
-    <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
-      <!-- Email -->
-      <a href="mailto:codethelabs@gmail.com" class="text-white text-decoration-none d-flex align-items-center" aria-label="Email">
-        <i class="bi bi-envelope-fill me-2" style="font-size: 1.2rem;"></i> codethelabs&#64;gmail.com
-      </a>
-      <!-- Mobile Phone (click to call and WhatsApp) -->
-      <a href="tel:+17373203408" class="text-white text-decoration-none d-flex align-items-center" aria-label="Phone">
-        <i class="bi bi-telephone-fill me-2" style="font-size: 1.2rem;"></i> +1 737 320 3408
-      </a>
-      <a href="https://wa.me/17373203408" target="_blank" rel="noopener" class="text-white text-decoration-none d-flex align-items-center" aria-label="WhatsApp">
-        <i class="bi bi-whatsapp me-2" style="font-size: 1.2rem;"></i> WhatsApp
-      </a>
-      <!-- SMS -->
-      <a href="sms:+17373203408" class="text-white text-decoration-none d-flex align-items-center" aria-label="SMS">
-        <i class="bi bi-chat-dots-fill me-2" style="font-size: 1.2rem;"></i> SMS
-      </a>
-    </div>
-    <hr class="my-3" style="border-color: rgba(255,255,255,0.3);" />
-    <div class="d-flex justify-content-center gap-4">
-      <a href="#" class="text-white text-decoration-none" aria-label="LinkedIn Profile">
-        <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-      </a>
-      <a href="#" class="text-white text-decoration-none" aria-label="GitHub Profile">
-        <i class="bi bi-github" style="font-size: 1.5rem;"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+<app-footer></app-footer>
 
 <!-- JavaScript to handle modal trigger -->
 <script>

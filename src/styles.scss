@@ -1,20 +1,113 @@
-/* You can add global styles to this file, and also import other style files */
-
-// Import Google Fonts - Roboto
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-// Bootstrap sets box-sizing to border-box for all elements (*, ::before, ::after)
-// and includes a CSS reset (Reboot).
+// Dark Theme Color Palette
+:root {
+  --primary-color: #bb86fc;
+  --primary-variant-color: #3700b3;
+  --secondary-color: #03dac6;
+  --background-color: #121212;
+  --surface-color: #1e1e1e;
+  --error-color: #cf6679;
+  --on-primary-color: #000000;
+  --on-secondary-color: #000000;
+  --on-background-color: #ffffff;
+  --on-surface-color: #ffffff;
+  --on-error-color: #000000;
+
+  // Bootstrap variable overrides for dark theme
+  --bs-body-color: var(--on-background-color);
+  --bs-body-bg: var(--background-color);
+  --bs-emphasis-color-rgb: 255, 255, 255; // For text muted
+  --bs-secondary-bg-subtle: var(--surface-color); // For badges
+}
 
 body {
   font-family: 'Roboto', sans-serif;
-  // Bootstrap's default font-size (1rem) and line-height (1.5) are generally good.
-  // If specific overrides are needed, they can be placed here.
-  // e.g., font-size: 16px;
-  // line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--on-background-color);
+  margin: 0; // Ensure no default margin
 }
 
 /* Importing Bootstrap SCSS file. */
-// It's generally better to import variables and then the rest of bootstrap
-// if you plan to customize bootstrap variables. For now, this is fine.
 @import 'bootstrap/scss/bootstrap';
+
+// Global styles
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-variant-color);
+  text-decoration: underline;
+}
+
+.fw-bold {
+  font-weight: 700 !important; // Bootstrap's fw-bold might be overridden
+}
+
+// Ensure icons have contrast
+.bi {
+  color: var(--on-surface-color);
+}
+
+// Specific overrides for Bootstrap components if needed
+.list-group-item {
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  border-color: rgba(255, 255, 255, 0.1); // Lighter border for dark theme
+}
+
+.card {
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-outline-success {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-success:hover {
+  color: var(--on-secondary-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-warning {
+    color: #ffc107;
+    border-color: #ffc107;
+}
+.btn-outline-warning:hover {
+    color: #000;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.text-success {
+  color: var(--secondary-color) !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.badge.bg-secondary {
+    background-color: var(--bs-secondary-bg-subtle) !important;
+    color: var(--on-surface-color) !important;
+}
+
+// Gradient text for headings
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
