@@ -124,9 +124,11 @@ section {
 }
 
 :host ::ng-deep .download-item {
-  background-color: transparent !important;
+  background: var(--card-gradient);
   border: none !important;
-  padding: 1rem 0 !important;
+  padding: 1rem !important;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
@@ -167,6 +169,9 @@ section {
   align-items: flex-start;
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
+  background: var(--card-gradient);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 
 .solution-item:hover {
