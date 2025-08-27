@@ -26,6 +26,7 @@ export class DownloadCounterService {
       hash |= 0; // Convert to 32-bit integer
     }
     return hash;
+    // force
   }
 
   private seededRandom(seed: number): number {
